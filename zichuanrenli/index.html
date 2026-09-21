@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="淄川人力资源和社会保障网官方门户，提供就业创业、社会保险、人才服务、劳动关系等一站式政务公开与办事指南。">
+    <meta name="keywords" content="淄川人力资源和社会保障网,淄川人社,淄博淄川社保,淄川就业,淄川人才">
+    <title>淄川人力资源和社会保障网-政务公开与便民服务指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --primary-dark: #004494;
+            --secondary-color: #f39c12;
+            --bg-light: #f4f6f9;
+            --text-main: #333333;
+            --text-light: #666666;
+            --border-color: #e1e4e8;
+            --white: #ffffff;
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --radius: 4px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--primary-color);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        .site-header {
+            background-color: var(--white);
+            box-shadow: var(--shadow-sm);
+            position: relative;
+            z-index: 100;
+        }
+
+        .top-bar {
+            background-color: #f8f9fa;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 12px;
+            color: var(--text-light);
+        }
+
+        .top-bar .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+            height: 36px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .main-header {
+            padding: 20px 0;
+            border-bottom: 1px solid transparent;
+        }
+
+        .main-header .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-img {
+            height: 50px;
+            width: auto;
+            background-color: #eee; /* Placeholder for logo */
+            border-radius: var(--radius);
+        }
+
+        .site-title h1 {
+            font-size: 24px;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .site-title p {
+            font-size: 12px;
+            color: var(--text-light);
+            margin-top: 2px;
+        }
+
+        /* Navigation */
+        .main-nav {
+            background-color: var(--primary-color);
+        }
+
+        .main-nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .nav-list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            display: block;
+            padding: 0 20px;
+            height: 45px;
+            line-height: 45px;
+            color: var(--white);
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            background-color: var(--primary-dark);
+        }
+
+        /* Search Bar */
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            border-radius: 20px;
+            padding: 5px 10px;
+            box-shadow: var(--shadow-sm);
+            margin-left: 20px;
+        }
+
+        .search-input {
+            border: none;
+            outline: none;
+            padding: 5px 10px;
+            font-size: 13px;
+            width: 200px;
+        }
+
+        .search-btn {
+            background: none;
+            border: none;
+            color: var(--primary-color);
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, #0056b3 0%, #003d80 100%);
+            padding: 40px 0;
+            color: var(--white);
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 30px;
+        }
+
+        .quick-links {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: var(--radius);
+        }
+
+        .quick-links h3 {
+            margin-bottom: 15px;
+            font-size: 18px;
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 10px;
+        }
+
+        .quick-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .quick-link-item {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px;
+            text-align: center;
+            border-radius: var(--radius);
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+
+        .quick-link-item:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .notice-board {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .notice-title {
+            font-size: 18px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .notice-title::before {
+            content: '';
+            display: block;
+            width: 6px;
+            height: 18px;
+            background-color: var(--secondary-color);
+            margin-right: 10px;
+        }
+
+        .notice-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+        }
+
+        .notice-list li a {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 85%;
+        }
+
+        /* Main Content */
+        .main-container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 15px;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 30px;
+        }
+
+        /* Section Styles */
+        .section-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--bg-light);
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--primary-dark);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        .section-more {
+            font-size: 13px;
+            color: var(--text-light);
+        }
+
+        /* Service Grid */
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .service-item {
+            background: var(--bg-light);
+            padding: 20px;
+            border-radius: var(--radius);
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+        }
+
+        .service-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .service-icon {
+            font-size: 32px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .service-name {
+            font-weight: 600;
+            color: var(--text-main);
+            margin-bottom: 5px;
+        }
+
+        .service-desc {
+            font-size: 12px;
+            color: var(--text-light);
+        }
+
+        /* News List */
+        .news-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .news-item {
+            display: flex;
+            align-items: flex-start;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed var(--border-color);
+        }
+
+        .news-item:last-child {
+            border-bottom: none;
+        }
+
+        .news-date {
+            background-color: #eef2f7;
+            color: var(--primary-color);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-right: 15px;
+            min-width: 60px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        .news-content h4 {
+            font-size: 15px;
+            margin-bottom: 4px;
+            font-weight: 500;
+        }
+
+        .news-content p {
+            font-size: 13px;
+            color: var(--text-light);
+        }
+
+        /* Sidebar */
+        .sidebar-widget {
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .chart-box {
+            width: 100%;
+            height: 200px;
+            background-color: #f9f9f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 14px;
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 5px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .faq-answer {
+            font-size: 13px;
+            color: var(--text-light);
+            padding-left: 15px;
+            border-left: 2px solid var(--secondary-color);
+        }
+
+        /* Footer */
+        .site-footer {
+            background-color: #2c3e50;
+            color: #bdc3c7;
+            padding: 40px 0 20px;
+            margin-top: 40px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        .contact-info li {
+            margin-bottom: 10px;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-icon {
+            margin-right: 8px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 13px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+
+            .main-container {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-list {
+                display: none; /* Simplified mobile nav for static demo */
+            }
+            
+            .search-bar {
+                display: none;
+            }
+
+            .top-bar {
+                display: none;
+            }
+            
+            .logo-area {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <span>欢迎访问淄川人力资源和社会保障网！</span>
+            <div class="top-links">
+                <a href="#">设为首页</a> | <a href="#">收藏本站</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="main-header">
+            <div class="container">
+                <div class="logo-area">
+                    <!-- Placeholder for official logo -->
+                    <div class="logo-img" style="background: linear-gradient(45deg, #0056b3, #00a8ff); display:flex; align-items:center; justify-content:center; color:white; font-weight:bold;">淄川人社</div>
+                    <div class="site-title">
+                        <h1>淄川人力资源和社会保障网</h1>
+                        <p>Zichuan Human Resources and Social Security Bureau</p>
+                    </div>
+                </div>
+                
+                <div class="search-bar">
+                    <input type="text" class="search-input" placeholder="请输入关键词查询...">
+                    <button class="search-btn">搜索</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="main-nav">
+            <div class="container">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#" class="nav-link active">首页</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">政务公开</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">就业创业</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">社会保险</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">人事人才</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">劳动关系</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">公共服务</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">专题专栏</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="quick-links">
+                <h3>常用服务</h3>
+                <div class="quick-grid">
+                    <a href="#" class="quick-link-item">社保查询</a>
+                    <a href="#" class="quick-link-item">就业登记</a>
+                    <a href="#" class="quick-link-item">人才招聘</a>
+                    <a href="#" class="quick-link-item">办事指南</a>
+                    <a href="#" class="quick-link-item">失业金申领</a>
+                    <a href="#" class="quick-link-item">社保转移</a>
+                </div>
+            </div>
+            <div class="notice-board">
+                <h3 class="notice-title">最新通知公告</h3>
+                <ul class="notice-list">
+                    <li>
+                        <a href="#">关于做好2024年度淄川区企业职工基本养老保险待遇领取资格认证工作的通知</a>
+                        <span>10-24</span>
+                    </li>
+                    <li>
+                        <a href="#">淄川区2024年秋季人才交流会暨高校毕业生专场招聘会公告</a>
+                        <span>10-22</span>
+                    </li>
+                    <li>
+                        <a href="#">关于调整全区城乡居民基本医疗保险筹资标准的通知</a>
+                        <span>10-18</span>
+                    </li>
+                    <li>
+                        <a href="#">关于开展淄川区2024年度职业技能等级认定工作的通知</a>
+                        <span>10-15</span>
+                    </li>
+                    <li>
+                        <a href="#">关于进一步优化失业保险经办服务流程的通知</a>
+                        <span>10-10</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        
+        <!-- Left Column -->
+        <div class="main-content">
+            
+            <!-- Featured Services -->
+            <section class="section-card">
+                <div class="section-header">
+                    <h2 class="section-title">服务大厅</h2>
+                    <a href="#" class="section-more">进入大厅 &raquo;</a>
+                </div>
+                <div class="service-grid">
+                    <div class="service-item">
+                        <span class="service-icon">💼</span>
+                        <div class="service-name">就业失业登记</div>
+                        <div class="service-desc">线上办理失业登记、求职登记</div>
+                    </div>
+                    <div class="service-item">
+                        <span class="service-icon">🏥</span>
+                        <div class="service-name">社保参保缴费</div>
+                        <div class="service-desc">企业职工、城乡居民社保缴纳</div>
+                    </div>
+                    <div class="service-item">
+                        <span class="service-icon">🎓</span>
+                        <div class="service-name">高校毕业生服务</div>
+                        <div class="service-desc">档案接收、就业见习、补贴申领</div>
+                    </div>
+                    <div class="service-item">
+                        <span class="service-icon">⚖️</span>
+                        <div class="service-name">劳动仲裁</div>
+                        <div class="service-desc">在线提交仲裁申请、查询进度</div>
+                    </div>
+                    <div class="service-item">
+                        <span class="service-icon">📄</span>
+                        <div class="service-name">技能培训报名</div>
+                        <div class="service-desc">职业技能提升培训补贴申请</div>
+                    </div>
+                    <div class="service-item">
+                        <span class="service-icon">🧾</span>
+                        <div class="service-name">职称评审</div>
+                        <div class="service-desc">专业技术人员职称申报系统</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- News & Info -->
+            <section class="section-card">
+                <div class="section-header">
+                    <h2 class="section-title">最新动态</h2>
+                    <a href="#" class="section-more">查看更多 &raquo;</a>
+                </div>
+                <div class="news-list">
+                    <article class="news-item">
+                        <div class="news-date">10-24</div>
+                        <div class="news-content">
+                            <h4><a href="#">淄川区开展“社保服务进万家”主题宣传活动</a></h4>
+                            <p>为提升社保政策知晓率，区人社局组织工作人员深入社区、企业开展政策宣讲和咨询服务。</p>
+                        </div>
+                    </article>
+                    <article class="news-item">
+                        <div class="news-date">10-22</div>
+                        <div class="news-content">
+                            <h4><a href="#">2024年淄川区部分事业单位公开招聘人员公告</a></h4>
+                            <p>根据《2024年淄川区事业单位公开招聘工作人员简章》，现将有关事项公告如下。</p>
+                        </div>
+                    </article>
+                    <article class="news-item">
+                        <div class="news-date">10-20</div>
+                        <div class="news-content">
+                            <h4><a href="#">关于规范全区人力资源市场秩序的通知</a></h4>
+                            <p>为维护公平竞争的市场环境，保障劳动者和用人单位合法权益，现就有关事项通知如下。</p>
+                        </div>
+                    </article>
+                    <article class="news-item">
+                        <div class="news-date">10-18</div>
+                        <div class="news-content">
+                            <h4><a href="#">淄博市人社局关于调整最低工资标准的通知</a></h4>
+                            <p>经省政府同意，决定自2024年11月1日起调整全市最低工资标准，具体标准如下。</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Hot Topics -->
+            <section class="section-card">
+                <div class="section-header">
+                    <h2 class="section-title">专题专栏</h2>
+                    <a href="#" class="section-more">更多专题 &raquo;</a>
+                </div>
+                <div style="display: flex; gap: 15px; overflow-x: auto; padding-bottom: 10px;">
+                    <div style="min-width: 200px; background: #f0f4f8; padding: 15px; border-radius: 4px; border-left: 4px solid #0056b3;">
+                        <h4 style="margin-bottom: 8px;">乡村振兴</h4>
+                        <p style="font-size: 12px; color: #666;">支持农村劳动力转移就业，助力乡村振兴战略实施。</p>
+                    </div>
+                    <div style="min-width: 200px; background: #f0f4f8; padding: 15px; border-radius: 4px; border-left: 4px solid #f39c12;">
+                        <h4 style="margin-bottom: 8px;">优化营商环境</h4>
+                        <p style="font-size: 12px; color: #666;">落实惠企政策，减轻企业负担，提升服务效能。</p>
+                    </div>
+                    <div style="min-width: 200px; background: #f0f4f8; padding: 15px; border-radius: 4px; border-left: 4px solid #27ae60;">
+                        <h4 style="margin-bottom: 8px;">智慧人社</h4>
+                        <p style="font-size: 12px; color: #666;">推进“互联网+人社”，实现更多业务“掌上办”、“一网通办”。</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Right Column -->
+        <aside class="sidebar">
+            <!-- Statistics -->
+            <div class="sidebar-widget">
+                <h3 class="section-title" style="font-size: 16px; margin-bottom: 15px;">数据概览</h3>
+                <div class="chart-box">
+                    <p>数据统计图表展示区</p>
+                </div>
+                <div style="margin-top: 15px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 12px; text-align: center;">
+                    <div>
+                        <div style="font-size: 20px; font-weight: bold; color: var(--primary-color);">12.5万</div>
+                        <div>参保人数</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 20px; font-weight: bold; color: var(--secondary-color);">850+</div>
+                        <div>招聘岗位</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+            <div class="sidebar-widget">
+                <h3 class="section-title" style="font-size: 16px; margin-bottom: 15px;">常见问题</h3>
+                <div class="faq-item">
+                    <div class="faq-question">如何查询社保缴费记录？ <span>+</span></div>
+                    <div class="faq-answer">可以通过“淄博市人社局”微信公众号或“淄博人社”APP进行查询。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">失业金怎么申领？ <span>+</span></div>
+                    <div class="faq-answer">符合领取条件的失业人员，可登录“国家社会保险公共服务平台”或前往街道社保所办理。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">职称评审需要什么材料？ <span>+</span></div>
+                    <div class="faq-answer">一般需提供身份证、学历证书、现有职称证书、年度考核表及业绩成果材料等。</div>
+                </div>
+            </div>
+
+            <!-- Contact -->
+            <div class="sidebar-widget">
+                <h3 class="section-title" style="font-size: 16px; margin-bottom: 15px;">联系我们</h3>
+                <ul class="contact-info">
+                    <li>
+                        <span class="contact-icon">📍</span>
+                        <span>淄博市淄川区松龄东路108号</span>
+                    </li>
+                    <li>
+                        <span class="contact-icon">📞</span>
+                        <span>0533-12333 (人社服务热线)</span>
+                    </li>
+                    <li>
+                        <span class="contact-icon">⏰</span>
+                        <span>周一至周五 8:30-12:00 14:00-17:30</span>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>关于我们</h4>
+                <p style="font-size: 13px; line-height: 1.8; color: #bdc3c7;">
+                    淄川区人力资源和社会保障局是主管全区人力资源和社会保障工作的政府工作部门。主要职责包括就业创业、社会保险、人事人才、劳动关系等。
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>快速链接</h4>
+                <ul class="footer-links">
+                    <li><a href="#">国家人社部</a></li>
+                    <li><a href="#">山东省人社厅</a></li>
+                    <li><a href="#">淄博市人社局</a></li>
+                    <li><a href="#">政务服务网</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>政务公开</h4>
+                <ul class="footer-links">
+                    <li><a href="#">机构设置</a></li>
+                    <li><a href="#">政策法规</a></li>
+                    <li><a href="#">规划计划</a></li>
+                    <li><a href="#">财政信息</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 淄川人力资源和社会保障局 版权所有 | 鲁ICP备XXXXXXXX号</p>
+        </div>
+    </footer>
+
+</body>
+  </html>
