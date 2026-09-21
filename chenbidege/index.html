@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="陈彼得个人资料简介，介绍陈彼得的生平经历、主要成就、代表作品及音乐风格。">
+    <meta name="keywords" content="陈彼得, 陈彼得个人资料, 陈彼得简介, 陈彼得音乐, 彼得, 音乐人">
+    <title>陈彼得个人资料简介-华语流行音乐人生平与作品</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #c0392b;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-color: #e0e0e0;
+            --spacing-unit: 1rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section {
+            padding: 3rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+            margin: 0.5rem auto 0;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #4ca1af 100%);
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Profile Section */
+        .profile-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .profile-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        .profile-img-placeholder {
+            width: 100%;
+            height: 300px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 1.2rem;
+        }
+
+        .profile-info {
+            padding: 2rem;
+        }
+
+        .profile-info h2 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .profile-tag {
+            display: inline-block;
+            background-color: #e8f4f8;
+            color: var(--primary-color);
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+        }
+
+        .profile-bio {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .info-table td {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .info-table td:first-child {
+            font-weight: bold;
+            color: var(--primary-color);
+            width: 30%;
+        }
+
+        /* Works Section */
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .work-item {
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .work-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+
+        .work-header {
+            height: 120px;
+            background-color: #eee;
+            position: relative;
+        }
+        
+        .work-header.music {
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+        }
+
+        .work-header.text {
+            background: linear-gradient(to right, #a18cd1, #fbc2eb);
+        }
+
+        .work-header.film {
+            background: linear-gradient(to right, #84fab0, #8fd3f4);
+        }
+
+        .work-title {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .work-body {
+            padding: 1rem;
+        }
+
+        .work-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Legacy Section */
+        .legacy-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .legacy-item {
+            display: flex;
+            align-items: flex-start;
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .legacy-icon {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            color: var(--accent-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links a {
+            margin: 0 1rem;
+            color: #ccc;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .copyright {
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem 0;
+            }
+
+            nav ul {
+                margin-top: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .profile-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <div class="logo">陈彼得<span>资料</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#profile">个人简介</a></li>
+                    <li><a href="#works">代表作品</a></li>
+                    <li><a href="#legacy">音乐成就</a></li>
+                    <li><a href="#faq">常见问答</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>陈彼得个人资料简介</h1>
+                <p>华语流行音乐教父级人物，创作、演唱、制作全方位音乐人</p>
+            </div>
+        </section>
+
+        <!-- Profile Section -->
+        <section id="profile" class="section">
+            <div class="container">
+                <h2 class="section-title">个人简介</h2>
+                <div class="profile-content">
+                    <article class="profile-card">
+                        <div class="profile-img-placeholder">陈彼得肖像</div>
+                        <div class="profile-info">
+                            <span class="profile-tag">华语流行音乐</span>
+                            <h2>陈彼得</h2>
+                            <p class="profile-bio">
+                                陈彼得（Peter Chen），1944年12月19日出生于中国四川成都，祖籍广东潮州。他是华语乐坛极具影响力的创作型歌手、音乐制作人，被誉为“台湾流行音乐之父”之一。陈彼得先生在20世纪70年代至80年代活跃于台湾乐坛，致力于将西方摇滚乐与中文传统元素结合，开创了台湾流行音乐的先河。
+                            </p>
+                            <div class="profile-bio">
+                                他不仅创作了大量脍炙人口的歌曲，更在音乐制作、艺人推广等方面做出了卓越贡献，是连接台湾早期流行音乐与现代流行文化的重要桥梁。
+                            </div>
+                        </div>
+                    </article>
+
+                    <aside>
+                        <div style="background: var(--card-bg); padding: 2rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                            <h3 style="margin-bottom: 1rem; color: var(--primary-color);">基本信息</h3>
+                            <table class="info-table">
+                                <tr>
+                                    <td>出生日期</td>
+                                    <td>1944年12月19日</td>
+                                </tr>
+                                <tr>
+                                    <td>出生地</td>
+                                    <td>中国四川成都</td>
+                                </tr>
+                                <tr>
+                                    <td>祖籍</td>
+                                    <td>广东潮州</td>
+                                </tr>
+                                <tr>
+                                    <td>职业</td>
+                                    <td>歌手、词曲作者、音乐制作人</td>
+                                </tr>
+                                <tr>
+                                    <td>活跃时期</td>
+                                    <td>20世纪70年代 - 至今</td>
+                                </tr>
+                                <tr>
+                                    <td>代表风格</td>
+                                    <td>摇滚、民谣、流行</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- Works Section -->
+        <section id="works" class="section" style="background-color: #fff;">
+            <div class="container">
+                <h2 class="section-title">代表作品</h2>
+                <div class="works-grid">
+                    <!-- Work 1 -->
+                    <div class="work-item">
+                        <div class="work-header music">
+                            <div class="work-title">《一剪梅》</div>
+                        </div>
+                        <div class="work-body">
+                            <div class="work-desc">虽然原唱为费玉清，但陈彼得曾参与该曲的编曲与制作，是经典华语老歌的代表作之一。</div>
+                        </div>
+                    </div>
+                    <!-- Work 2 -->
+                    <div class="work-item">
+                        <div class="work-header music">
+                            <div class="work-title">《外婆的澎湖湾》</div>
+                        </div>
+                        <div class="work-body">
+                            <div class="work-desc">陈彼得参与了该曲的编曲工作，这首歌曲以其温馨的旋律成为了几代人的童年回忆。</div>
+                        </div>
+                    </div>
+                    <!-- Work 3 -->
+                    <div class="work-item">
+                        <div class="work-header music">
+                            <div class="work-title">《我是一只小小鸟》</div>
+                        </div>
+                        <div class="work-body">
+                            <div class="work-desc">陈彼得是该曲的词曲创作者，深刻描绘了都市底层小人物的心声，传唱度极高。</div>
+                        </div>
+                    </div>
+                    <!-- Work 4 -->
+                    <div class="work-item">
+                        <div class="work-header text">
+                            <div class="work-title">《等待》</div>
+                        </div>
+                        <div class="work-body">
+                            <div class="work-desc">陈彼得创作的抒情歌曲，表达了深沉的情感等待，常被翻唱。</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Legacy Section -->
+        <section id="legacy" class="section">
+            <div class="container">
+                <h2 class="section-title">音乐成就与影响</h2>
+                <div class="legacy-list">
+                    <div class="legacy-item">
+                        <div class="legacy-icon">🎵</div>
+                        <div>
+                            <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">推动摇滚乐本土化</h3>
+                            <p style="color: var(--text-secondary);">陈彼得是早期将西方摇滚乐引入台湾并尝试本土化的重要推手。他组建了“四人行”乐队，并发行了多张具有实验性质的摇滚专辑。</p>
+                        </div>
+                    </div>
+                    <div class="legacy-item">
+                        <div class="legacy-icon">✍️</div>
+                        <div>
+                            <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;"> prolific 词曲创作</h3>
+                            <p style="color: var(--text-secondary);">他创作了数百首歌曲，不仅为自己演唱，也为许多知名歌手提供了优质的作品，涵盖民谣、流行、摇滚等多种风格。</p>
+                        </div>
+                    </div>
+                    <div class="legacy-item">
+                        <div class="legacy-icon">🌟</div>
+                        <div>
+                            <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">行业标杆地位</h3>
+                            <p style="color: var(--text-secondary);">作为资深音乐人，陈彼得在业内的资历深厚，对后辈音乐人给予了极大的支持和指导，是华语乐坛的常青树。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section" style="background-color: #fff;">
+            <div class="container">
+                <h2 class="section-title">常见问答</h2>
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <details style="margin-bottom: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
+                        <summary style="cursor: pointer; font-weight: bold; color: var(--primary-color); padding: 0.5rem 0;">陈彼得最著名的代表作有哪些？</summary>
+                        <p style="color: var(--text-secondary); margin-top: 0.5rem; padding-left: 1rem;">除了《我是一只小小鸟》外，他的《等待》、《落叶知秋》以及参与制作的《一剪梅》、《外婆的澎湖湾》都是广为人知的经典作品。</p>
+                    </details>
+                    <details style="margin-bottom: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
+                        <summary style="cursor: pointer; font-weight: bold; color: var(--primary-color); padding: 0.5rem 0;">陈彼得现在还活跃在乐坛吗？</summary>
+                        <p style="color: var(--text-secondary); margin-top: 0.5rem; padding-left: 1rem;">是的，陈彼得依然活跃在音乐创作和制作领域，偶尔会参与演出和音乐节活动，持续为华语乐坛贡献力量。</p>
+                    </details>
+                    <details style="margin-bottom: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
+                        <summary style="cursor: pointer; font-weight: bold; color: var(--primary-color); padding: 0.5rem 0;">他为什么被称为“台湾流行音乐之父”之一？</summary>
+                        <p style="color: var(--text-secondary); margin-top: 0.5rem; padding-left: 1rem;">因为他早在20世纪70年代就积极推动台湾音乐的现代化转型，引入了摇滚元素，并培养了大量音乐人才，奠定了台湾流行音乐的基础。</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">关于我们</a>
+                <a href="#">版权声明</a>
+                <a href="#">联系合作</a>
+            </div>
+            <p class="copyright">Copyright © 2023 陈彼得资料馆 | 仅供资料查询与学习使用</p>
+        </div>
+    </footer>
+
+</body>
+</html>
