@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="优月真里奈 - 专注日系写真摄影艺术展示，收录高清写真作品、个人风格解析及创作理念分享。">
+    <meta name="keywords" content="优月真里奈,写真摄影,日系风格,个人作品集,摄影艺术">
+    <title>优月真里奈-日系写真摄影作品与风格解析</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --bg-color: #f8f9fa;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --accent-color: #c9a66b;
+            --accent-hover: #b08d55;
+            --card-bg: #ffffff;
+            --border-radius: 8px;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--text-main);
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        .header-actions button {
+            background: transparent;
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+            padding: 6px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .header-actions button:hover {
+            background: var(--accent-color);
+            color: #fff;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://picsum.photos/seed/realina_hero/1920/1080.jpg') no-repeat center center/cover;
+            margin-bottom: 40px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 20px;
+            animation: fadeIn Up 1s ease;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 16px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 12px 32px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+        }
+
+        /* Introduction */
+        .intro-section {
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .intro-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .intro-content h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .intro-content h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: var(--accent-color);
+            margin: 10px auto 0;
+        }
+
+        .intro-content p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        /* Gallery Grid */
+        .gallery-section {
+            padding: 40px 0;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            margin-bottom: 24px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 16px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .card-image {
+            height: 350px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover .card-image img {
+            transform: scale(1.05);
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-main);
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: #999;
+        }
+
+        /* Style Analysis */
+        .analysis-section {
+            background-color: #fff;
+            padding: 60px 0;
+            margin-top: 40px;
+        }
+
+        .analysis-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .analysis-image {
+            position: relative;
+        }
+
+        .analysis-image img {
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .analysis-list {
+            margin-top: 20px;
+        }
+
+        .analysis-item {
+            margin-bottom: 20px;
+        }
+
+        .analysis-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .analysis-item h3::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .analysis-item p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 40px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #bdc3c7;
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.85rem;
+            color: #95a5a6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+
+            nav ul {
+                margin-top: 15px;
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .analysis-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">YueYue<span>Realina</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#gallery">作品集</a></li>
+                    <li><a href="#style">风格解析</a></li>
+                    <li><a href="#about">关于</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button type="button">订阅更新</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>优月真里奈</h1>
+                <p>捕捉光影中的日系美学，记录真实而细腻的情感瞬间</p>
+                <a href="#gallery" class="btn-primary">浏览作品</a>
+            </div>
+        </section>
+
+        <!-- Introduction -->
+        <section class="container intro-section">
+            <div class="intro-content">
+                <h2>关于优月真里奈</h2>
+                <p>优月真里奈是一位专注于日系清新风格的写真摄影师与视觉创作者。她的作品以柔和的光影、自然的表情捕捉和极具氛围感的构图而著称，致力于在平凡的生活场景中寻找独特的视觉张力。</p>
+                <p>通过镜头语言，她探索了人像摄影中“留白”的艺术，不仅记录人物的外貌，更试图传达人物内心的情绪与故事。</p>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="container gallery-section">
+            <div class="section-header">
+                <h2 class="section-title">精选作品</h2>
+                <a href="#" style="color: var(--accent-color); font-weight: 500;">查看全部 &rarr;</a>
+            </div>
+            <div class="gallery-grid">
+                <!-- Card 1 -->
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/realina1/400/500" alt="优月真里奈作品集 - 咖啡时光">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">咖啡时光</h3>
+                        <p class="card-desc">午后阳光透过窗纱洒在桌面上，捕捉慵懒而惬意的瞬间。</p>
+                        <div class="card-meta">
+                            <span>2023.10.15</span>
+                            <span>日系风格</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/realina2/400/500" alt="优月真里奈作品集 - 森林漫步">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">森林漫步</h3>
+                        <p class="card-desc">利用自然光拍摄的人像，强调人与自然的和谐共生。</p>
+                        <div class="card-meta">
+                            <span>2023.09.28</span>
+                            <span>户外人像</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/realina3/400/500" alt="优月真里奈作品集 - 街头光影">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">街头光影</h3>
+                        <p class="card-desc">城市建筑中的几何线条与光影交错，展现现代都市感。</p>
+                        <div class="card-meta">
+                            <span>2023.09.12</span>
+                            <span>街拍</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/realina4/400/500" alt="优月真里奈作品集 - 蓝色幻想">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">蓝色幻想</h3>
+                        <p class="card-desc">以蓝色调为主的高饱和度摄影作品，营造梦幻氛围。</p>
+                        <div class="card-meta">
+                            <span>2023.08.05</span>
+                            <span>调色作品</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Style Analysis Section -->
+        <section id="style" class="analysis-section">
+            <div class="container">
+                <div class="analysis-grid">
+                    <div class="analysis-image">
+                        <img src="https://picsum.photos/seed/realina_style/600/400" alt="优月真里奈摄影风格展示">
+                    </div>
+                    <div class="analysis-content">
+                        <h2 class="section-title">风格解析</h2>
+                        <p style="color: var(--text-secondary); margin-bottom: 20px;">优月真里奈的摄影风格并非一成不变，而是随着光影环境不断流动。以下是她的核心创作理念：</p>
+                        
+                        <div class="analysis-list">
+                            <div class="analysis-item">
+                                <h3>自然光运用的极致</h3>
+                                <p>拒绝强烈的闪光灯直射，擅长利用清晨的侧逆光和傍晚的黄金时刻，为画面增添温暖且柔和的质感。</p>
+                            </div>
+                            <div class="analysis-item">
+                                <h3>情绪引导与抓拍</h3>
+                                <p>不同于僵硬的摆拍，她更注重与模特的沟通，通过自然的行为捕捉来展现人物最真实、最生动的情绪。</p>
+                            </div>
+                            <div class="analysis-item">
+                                <h3>高明度低对比度</h3>
+                                <p>在后期处理上，倾向于保留高光部分的细节，降低阴影部分的对比度，使画面看起来通透、干净。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="container" style="padding: 60px 0;">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 40px;">常见问题</h2>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <details style="margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                    <summary style="cursor: pointer; font-weight: 600; list-style: none; position: relative; padding-right: 20px;">
+                        如何获取优月真里奈的授权合作？
+                        <span style="position: absolute; right: 0; top: 0;">+</span>
+                    </summary>
+                    <p style="margin-top: 10px; color: var(--text-secondary);">请通过页面底部的联系邮箱发送商务合作意向，我们会尽快与您取得联系。</p>
+                </details>
+                <details style="margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                    <summary style="cursor: pointer; font-weight: 600; list-style: none; position: relative; padding-right: 20px;">
+                        作品集是否包含版权？
+                        <span style="position: absolute; right: 0; top: 0;">+</span>
+                    </summary>
+                    <p style="margin-top: 10px; color: var(--text-secondary);">本网站展示的所有图片及视频内容均受版权保护，未经授权严禁用于商业用途。</p>
+                </details>
+                <details style="margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                    <summary style="cursor: pointer; font-weight: 600; list-style: none; position: relative; padding-right: 20px;">
+                        是否提供线下写真服务？
+                        <span style="position: absolute; right: 0; top: 0;">+</span>
+                    </summary>
+                    <p style="margin-top: 10px; color: var(--text-secondary);">目前主要以作品展示和线上艺术创作为主，暂不开放大规模线下约拍业务。</p>
+                </details>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <a href="#" class="logo" style="color: #fff; display: block; margin-bottom: 15px;">YueYue<span>Realina</span></a>
+                    <p style="color: #bdc3c7; font-size: 0.9rem; line-height: 1.6;">
+                        专注于日系摄影艺术的分享平台，用镜头记录美好瞬间。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#gallery">作品集</a></li>
+                        <li><a href="#style">风格解析</a></li>
+                        <li><a href="#">联系我</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注我们</h4>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">微博</a></li>
+                        <li><a href="#">小红书</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>contact@realina.example.com</li>
+                        <li>上海市徐汇区创意园 A栋</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 优月真里奈 YueYue Realina. All Rights Reserved. 
+            </div>
+        </div>
+    </footer>
+
+</body>
+                      </html>
