@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="黄瓜炒肉片的做法大全，为您提供经典家常黄瓜炒肉片的制作方法、步骤详解、营养搭配及烹饪技巧，教您如何炒出脆嫩爽口、肉片鲜嫩的黄瓜炒肉片。">
+    <meta name="keywords" content="黄瓜炒肉片,黄瓜炒肉片的做法,家常菜谱,肉片炒菜">
+    <title>黄瓜炒肉片-经典家常菜做法与烹饪技巧指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --primary-dark: #388E3C;
+            --secondary-color: #FF9800;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --bg-body: #f9fbf9;
+            --bg-card: #ffffff;
+            --spacing-unit: 16px;
+            --border-radius: 8px;
+            --shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-card);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #e8f5e9 0%, #ffffff 100%);
+            padding: 60px 0;
+            text-align: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            color: var(--text-main);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Main Content Grid */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 32px;
+            margin-top: 32px;
+            margin-bottom: 60px;
+        }
+
+        @media (max-width: 768px) {
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 10px 0;
+                gap: 10px;
+            }
+            nav ul {
+                gap: 16px;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Article Section */
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 24px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary-color);
+            display: inline-block;
+        }
+
+        .intro-text {
+            margin-bottom: 24px;
+            font-size: 1.05rem;
+            text-align: justify;
+        }
+
+        /* Ingredients */
+        .ingredients-box {
+            background-color: #fff3e0;
+            border-left: 5px solid var(--secondary-color);
+            padding: 20px;
+            margin-bottom: 32px;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+
+        .ingredients-title {
+            font-weight: 700;
+            color: #e65100;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .ingredient-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 12px;
+        }
+
+        .ingredient-item {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.95rem;
+        }
+
+        .ingredient-item strong {
+            color: #5d4037;
+        }
+
+        /* Steps */
+        .step-card {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .step-number {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .step-content h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .step-content p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Tips Section */
+        .tips-section {
+            background-color: #fff;
+            padding: 24px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 32px;
+        }
+
+        .tips-section h3 {
+            color: var(--primary-dark);
+            margin-bottom: 16px;
+            font-size: 1.2rem;
+        }
+
+        .tips-list li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 10px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .tips-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* Sidebar */
+        .sidebar-card {
+            background-color: var(--bg-card);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 20px;
+            margin-bottom: 24px;
+        }
+
+        .sidebar-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 16px;
+            color: var(--text-main);
+            border-bottom: 1px solid #eee;
+            padding-bottom: 8px;
+        }
+
+        .related-list li {
+            margin-bottom: 12px;
+            border-bottom: 1px dashed #eee;
+            padding-bottom: 8px;
+        }
+
+        .related-list li:last-child {
+            border-bottom: none;
+        }
+
+        .related-list a {
+            display: block;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .related-list a:hover {
+            color: var(--primary-color);
+        }
+
+        .related-meta {
+            font-size: 0.8rem;
+            color: #999;
+            margin-top: 4px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #ccc;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <span>🥒</span> 美味家常菜谱
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">荤菜</a></li>
+                    <li><a href="#">素菜</a></li>
+                    <li><a href="#">汤羹</a></li>
+                    <li><a href="#">下饭菜</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>黄瓜炒肉片</h1>
+            <p>一道清爽解腻的家常下饭菜，肉片鲜嫩多汁，黄瓜脆爽清香，简单易学，营养均衡。</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="main-layout">
+            <!-- Left Column: Main Content -->
+            <div class="content-col">
+                
+                <article>
+                    <h2 class="section-title">黄瓜炒肉片的做法</h2>
+                    <p class="intro-text">
+                        黄瓜炒肉片是一道非常经典的中式家常菜。它利用黄瓜的清香中和肉类的油腻，口感层次丰富。无论是作为日常便当还是家庭聚餐的配菜，都是非常不错的选择。本指南将详细介绍如何处理肉片以保持嫩滑，以及如何掌握火候让黄瓜保持脆爽。
+                    </p>
+
+                    <!-- Ingredients -->
+                    <div class="ingredients-box">
+                        <div class="ingredients-title">📝 所需食材</div>
+                        <div class="ingredient-list">
+                            <div class="ingredient-item"><strong>主料：</strong> 猪里脊肉 200克</div>
+                            <div class="ingredient-item"><strong>辅料：</strong> 黄瓜 1根（约150克）</div>
+                            <div class="ingredient-item"><strong>调料：</strong> 食用油 适量、生抽 1勺、老抽 半勺、料酒 1勺、淀粉 1勺、盐 适量、蒜末 适量</div>
+                        </div>
+                    </div>
+
+                    <!-- Steps -->
+                    <div class="steps-container">
+                        <div class="step-card">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>处理肉片（关键步骤）</h3>
+                                <p>将猪里脊肉切成薄片。为了防止肉片炒老变柴，腌制是必须的。将切好的肉片放入碗中，加入少许盐、生抽、料酒和淀粉，用手抓匀上浆，最后淋入一勺食用油锁住水分，腌制10分钟。</p>
+                            </div>
+                        </div>
+
+                        <div class="step-card">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>准备配菜</h3>
+                                <p>黄瓜洗净，用削皮刀削去表皮（保留一点绿皮更有食欲），切成薄片。准备几瓣大蒜拍碎切成蒜末备用。如果喜欢辣味，可以准备少许干辣椒段。</p>
+                            </div>
+                        </div>
+
+                        <div class="step-card">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>滑炒肉片</h3>
+                                <p>锅中烧热油，油温五成热时（手放在锅上方能感到温热），下入腌制好的肉片。用筷子快速滑散，待肉片变色卷曲（约8-9分熟）时，迅速盛出备用。这一步可以最大程度保留肉片的嫩度。</p>
+                            </div>
+                        </div>
+
+                        <div class="step-card">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h3>合炒调味</h3>
+                                <p>锅中留底油，爆香蒜末和干辣椒（如果使用）。倒入切好的黄瓜片，大火快速翻炒约1分钟，至黄瓜略微变软但仍保持脆感。倒入之前滑好的肉片，加入少许盐调味，淋入少许水淀粉勾薄芡，翻炒均匀即可出锅。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tips -->
+                    <div class="tips-section">
+                        <h3>💡 烹饪小贴士</h3>
+                        <ul class="tips-list">
+                            <li><strong>选肉技巧：</strong> 最好选择猪里脊肉，因为这块肉肉质最嫩，脂肪含量低，不容易塞牙。</li>
+                            <li><strong>火候控制：</strong> 黄瓜下锅后不宜炒太久，否则会出水变软，失去爽脆口感。</li>
+                            <li><strong>上浆秘诀：</strong> 加入淀粉和油腌制是肉片不老的关键，油能形成保护膜。</li>
+                            <li><strong>调味建议：</strong> 不喜欢吃太重口味的，可以只用盐和蒜末，突出食材本味。</li>
+                        </ul>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Right Column: Sidebar -->
+            <aside class="sidebar-col">
+                
+                <div class="sidebar-card">
+                    <h3>🔥 相关推荐菜谱</h3>
+                    <ul class="related-list">
+                        <li>
+                            <a href="#">青椒炒肉片</a>
+                            <span class="related-meta">家常菜 · 15分钟</span>
+                        </li>
+                        <li>
+                            <a href="#">木须肉</a>
+                            <span class="related-meta">经典鲁菜 · 20分钟</span>
+                        </li>
+                        <li>
+                            <a href="#">西葫芦炒肉片</a>
+                            <span class="related-meta">清爽素菜 · 10分钟</span>
+                        </li>
+                        <li>
+                            <a href="#">黄瓜鸡蛋汤</a>
+                            <span class="related-meta">快手汤品 · 5分钟</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-card">
+                    <h3>📖 营养搭配指南</h3>
+                    <p style="font-size: 0.9rem; color: #666; margin-bottom: 10px;">
+                        黄瓜炒肉片富含优质蛋白质和维生素C，有助于增强免疫力和促进新陈代谢。
+                    </p>
+                    <ul class="tips-list" style="font-size: 0.9rem;">
+                        <li>适合人群：一般人群均可食用。</li>
+                        <li>禁忌人群：脾胃虚寒者不宜多食黄瓜。</li>
+                    </ul>
+                </div>
+
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 美味家常菜谱网. 专注于分享简单易学的家庭烹饪技巧。</p>
+            <p style="font-size: 0.8rem; color: #777;">本页面内容仅供参考，具体操作请根据实际情况调整。</p>
+        </div>
+    </footer>
+
+</body>
+</html>
